@@ -1,0 +1,25 @@
+.popup__about {
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
+  width: 358px;
+  height: 27px;
+  padding-top: 27px;
+  margin: 0 auto;
+  outline: none;
+}
+
+.popup__about::placeholder {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+@media screen and (max-width: 880px) {
+  .popup__about {
+    width: 238px;
+  }
+}

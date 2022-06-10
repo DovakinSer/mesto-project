@@ -1,0 +1,13 @@
+.element__mask{
+  display: flex;
+  justify-content: space-between;
+  width: 246px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 880px) {
+  .element__mask {
+    margin-top: 15px;
+  }
+}
