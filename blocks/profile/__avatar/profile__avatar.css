@@ -2,7 +2,6 @@
   border-radius: 50%;
   max-width: 120px;
   max-height: 120px;
-  background-size: cover;
 }
 
 @media screen and (max-width: 880px) {

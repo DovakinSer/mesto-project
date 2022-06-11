@@ -1,16 +1,17 @@
-.element__rectangle {
+.element__button {
   display: block;
   background-color: white;
-  background-image: url(../../../Images/Vector\ \(Stroke\).png);
+  background-image: url(../../../Images/Vector.svg);
   background-repeat: no-repeat;
   background-position: center;
   align-self: center;
   width: 22px;
   height: 19px;
   border: none;
+  cursor: pointer;
 }
 
-.element__rectangle:hover {
+.element__button:hover {
   opacity: 0.5;
 }
 
