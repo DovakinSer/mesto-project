@@ -3,12 +3,14 @@
   background-color: white;
   background-image: url(../../../Images/Vector.svg);
   background-repeat: no-repeat;
+  background-size: 19px 22px;
   background-position: center;
   align-self: center;
-  width: 22px;
+  min-width: 22px;
   height: 19px;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .element__button:hover {
