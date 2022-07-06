@@ -110,7 +110,3 @@ initialCards.forEach( card => {
   elements.prepend(newCard);
 })
 
-
-//profileForm.addEventListener('submit', Profile);
-//cardForm.addEventListener('submit', cardProfile);
-
