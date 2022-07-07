@@ -5,8 +5,7 @@
   background-color: rgba(0, 0, 0, .5);
   top: 0;
   left: 0;
-  display: none;
+  visibility: hidden;
   transition: all .5s ease;
 	opacity: 0;
-	visibility: hidden;
 }
