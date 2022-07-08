@@ -21,33 +21,6 @@ const descriptionPopup = popupImage.querySelector('.popup-image__subtitle')
 const profileForm = popupProfile.querySelector('.popup__body')
 const cardForm = popupCardAdd.querySelector('.popup__body')
 
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-  ];
-
 function openPopup(popup) {
   popup.classList.add('popup_opened')// функция открытия попапов
 };
@@ -69,11 +42,11 @@ function deleteCard (cardElement) {
   cardElement.remove();
 }
 
-function profileChange (evt) {//для измения информации в профиле//
+function handleProfileFormSubmit (evt) {//для измения информации в профиле
   evt.preventDefault();
   profileName.textContent = profileForm.name.value;
   profileAbout.textContent = profileForm.about.value;
-  popupProfile.classList.remove('popup_opened');
+  closePopup(popupProfile)
 }
 
 function handleCardFormSubmit(evt) {
@@ -82,12 +55,12 @@ function handleCardFormSubmit(evt) {
   const nameImage = cardForm.text.value;
   const newCard = createCard(nameImage, linkImage)
   elements.prepend(newCard);
-  popupCardAdd.classList.remove('popup_opened')
+  closePopup(popupCardAdd)
   cardForm.text.value = '';
   cardForm.link.value = '';
 }
 
-profileForm.addEventListener('submit', profileChange);//измение информации//
+profileForm.addEventListener('submit', handleProfileFormSubmit);//измение информации//
 cardForm.addEventListener('submit', handleCardFormSubmit);//измение информации
 
 function createCard(name, link) {// делелали для создания карточек
