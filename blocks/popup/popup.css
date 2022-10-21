@@ -8,4 +8,6 @@
   visibility: hidden;
   transition: all .5s ease;
 	opacity: 0;
+  display: flex;
+  justify-content: center;
 }
