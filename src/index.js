@@ -1,3 +1,5 @@
+import '../pages/index.css';
+import initialCards from "./components"
 //делали для открытие попапа из профайлов
 const addButton = document.querySelector('.profile__add-button')
 const profileButton = document.querySelector('.profile__button')
@@ -190,7 +192,3 @@ const toggleButtonState = (inputList, buttonElement) => {
 };
 
 enableValidation();
-
-
-
-
