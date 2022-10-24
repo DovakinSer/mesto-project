@@ -1,5 +1,5 @@
-import '../pages/index.css';
-import initialCards from "./components"
+import './pages/index.css';
+import {initialCards} from './components.js'
 //делали для открытие попапа из профайлов
 const addButton = document.querySelector('.profile__add-button')
 const profileButton = document.querySelector('.profile__button')

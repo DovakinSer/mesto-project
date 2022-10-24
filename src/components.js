@@ -1,35 +1,28 @@
-import ArxizImage from 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg';
-import ChelibImage from 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg';
-import IvanovoImage from 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg';
-import KamchatkaImage from 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg';
-import XolmogorImage from 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg';
-import BaikalImage from 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg';
-
-export const initialCards = [
+ export const initialCards = [
   {
     name: 'Архыз',
-    link: ArxizImage
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
   },
   {
     name: 'Челябинская область',
-    link: ChelibImage
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
   },
   {
     name: 'Иваново',
-    link: IvanovoImage
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
   },
   {
     name: 'Камчатка',
-    link: KamchatkaImage
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
   },
   {
     name: 'Холмогорский район',
-    link: XolmogorImage
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
   },
   {
     name: 'Байкал',
-    link: BaikalImage
-  }
-  ];
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  },
+];
 
 
