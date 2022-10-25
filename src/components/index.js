@@ -2,7 +2,7 @@ import '../pages/index.css';
 import {initialCards} from './card.js'
 import {addButton, profileButton, profile, profileName, profileAbout, popups, popupProfile, popupCardAdd, popupImage, popupBody, elements, cards, picturePopup, descriptionPopup, profileForm, cardForm} from './utils.js';
 import {showInputError, hideInputError, checkInputValidity, setEventListeners, enableValidation, hasInvalidInput, toggleButtonState} from './validate.js'
-import {openPopup, closePopup, openedCardPopup, handleProfileFormSubmit, handleCardFormSubmit, createCard, popupCloseEsc, popupCloseOverlay, deleteCard} from './modal.js'
+import {openPopup, closePopup, openedCardPopup, handleProfileFormSubmit, handleCardFormSubmit, createCard, closeEscPopup, closeOverlayPopup, deleteCard} from './modal.js'
 
 
 
@@ -18,6 +18,7 @@ profileButton.addEventListener('click', evt => {
 
 addButton.addEventListener('click', evt => {
   openPopup(popupCardAdd);// открыли попап 2
+  submitButtonSelector.disabled = true;
 });
 
 popups.forEach( popup => {

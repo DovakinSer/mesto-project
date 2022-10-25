@@ -7,12 +7,14 @@ export function deleteCard(cardElement) {
 
 export function openPopup(popup) {
   popup.classList.add('popup_opened')// функция открытия попапов
-  document.addEventListener('keydown', popupCloseEsc)// слушатель закрытия попапы на escape
-  document.addEventListener('dblclick', popupCloseOverlay)// слушатель закрытия попапы на оверлай
+  document.addEventListener('keydown', closeEscPopup)// слушатель закрытия попапы на escape
+  document.addEventListener('dblclick', closeOverlayPopup)// слушатель закрытия попапы на оверлай
 };
 
 export function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeEscPopup)// слушатель закрытия попапы на escape
+  document.removeEventListener('dblclick', closeOverlayPopup)
 }
 
 export function openedCardPopup(element) {// наполняет попап с карточками
@@ -58,16 +60,15 @@ export function createCard(name, link) {// делелали для создан�
 }
 
 //закрываем попапы на Esc и оверлей
-export function popupCloseEsc(evt) {
-  const popupOpened = document.querySelector('.popup_opened')
+export function closeEscPopup(evt) {
   if (evt.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened')
     closePopup(popupOpened)
   }
 }
 
-export function popupCloseOverlay(evt) {
-  const popupOpened = document.querySelector('.popup_opened')
+export function closeOverlayPopup(evt) {
   if (evt.target.classList.contains('popup')) {
-    closePopup(popupOpened)
+    closePopup(evt.target)
   }
 }
