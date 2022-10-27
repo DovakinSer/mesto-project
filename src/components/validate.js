@@ -38,7 +38,7 @@ export const setEventListeners = (formElement) => {
       toggleButtonState(inputList, buttonElement);
     });
   });
-  formElement.addEventListener('reset', () => {
+  formElement.addEventListener('reset', () => {// 4 шаг
     toggleButtonState(inputList, buttonElement); //какой из двух вариантов сюда передать? А то вроде как оба не работают
     //buttonElement.setAttribute('disabled', true);
   })
