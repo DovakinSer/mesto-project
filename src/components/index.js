@@ -18,7 +18,6 @@ profileButton.addEventListener('click', evt => {
 
 addButton.addEventListener('click', evt => {
   openPopup(popupCardAdd);// открыли попап 2
-  submitButtonSelector.disabled = true;
 });
 
 popups.forEach( popup => {

@@ -1,5 +1,5 @@
 import {popups, popupProfile, popupCardAdd, popupImage, profile, profileName, profileAbout, addButton, profileButton, elements, cards, picturePopup, descriptionPopup, profileForm, cardForm} from './utils.js';
-
+import {toggleButtonState} from './validate.js';
 // функция удаления карточки
 export function deleteCard(cardElement) {
   cardElement.remove();

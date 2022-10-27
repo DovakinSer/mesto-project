@@ -30,7 +30,6 @@ export const checkInputValidity = (formElement, inputElement) => {
 export const setEventListeners = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll('.popup__field'));
   const buttonElement = formElement.querySelector('.popup__save');
-
   toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {
@@ -39,6 +38,10 @@ export const setEventListeners = (formElement) => {
       toggleButtonState(inputList, buttonElement);
     });
   });
+  formElement.addEventListener('reset', () => {
+    toggleButtonState(inputList, buttonElement); //какой из двух вариантов сюда передать? А то вроде как оба не работают
+    //buttonElement.setAttribute('disabled', true);
+  })
 };
 
 export const enableValidation = () => {
@@ -47,11 +50,12 @@ export const enableValidation = () => {
     formElement.addEventListener('submit', function (evt) {
       evt.preventDefault();
     });
-    const fieldsetList = Array.from(formElement.querySelectorAll('.popup__content'));
+    setEventListeners(formElement); // 2)второй шаг сделать еще внутри перебора setEventListeners(formElement);
+    // 1)удалить массив филдсетов - const fieldsetList = Array.from(formElement.querySelectorAll('.popup__content'));
 
-    fieldsetList.forEach((fieldSet) => {
-      setEventListeners(fieldSet);
-    });
+    //fieldsetList.forEach((fieldSet) => {
+      //setEventListeners(fieldSet);
+    //}); 3) шаг удалить перебор
   });
 };
 
