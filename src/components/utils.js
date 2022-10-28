@@ -1,3 +1,12 @@
+export const settings = {
+  formSelector: '.popup__body',
+  inputSelector: '.popup__field',
+  submitButtonSelector: '.popup__save',
+  inactiveButtonClass: 'popup__save_inactive',
+  inputErrorClass: 'popup__field_type_error',
+  errorClass: 'popup__span-error_active'
+};
+
 //делали для открытие попапа из профайлов
 export const addButton = document.querySelector('.profile__add-button')
 export const profileButton = document.querySelector('.profile__button')

@@ -1,6 +1,6 @@
 import '../pages/index.css';
 import {initialCards} from './card.js'
-import {addButton, profileButton, profile, profileName, profileAbout, popups, popupProfile, popupCardAdd, popupImage, popupBody, elements, cards, picturePopup, descriptionPopup, profileForm, cardForm} from './utils.js';
+import {settings, addButton, profileButton, profile, profileName, profileAbout, popups, popupProfile, popupCardAdd, popupImage, popupBody, elements, cards, picturePopup, descriptionPopup, profileForm, cardForm} from './utils.js';
 import {showInputError, hideInputError, checkInputValidity, setEventListeners, enableValidation, hasInvalidInput, toggleButtonState} from './validate.js'
 import {openPopup, closePopup, openedCardPopup, handleProfileFormSubmit, handleCardFormSubmit, createCard, closeEscPopup, closeOverlayPopup, deleteCard} from './modal.js'
 
@@ -33,11 +33,4 @@ initialCards.forEach( card => {
   elements.prepend(newCard);
 })
 
-enableValidation({
-  formSelector: '.popup__body',
-  inputSelector: '.popup__field',
-  submitButtonSelector: '.popup__save',
-  inactiveButtonClass: 'popup__save_disabled',
-  inputErrorClass: 'popup__span-error',
-  errorClass: 'popup__span-error_active'
-});
+enableValidation(settings);
